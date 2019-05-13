@@ -1,0 +1,11 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ADDatePicker" "${PODS_CONFIGURATION_BUILD_DIR}/BottomPopup" "${PODS_CONFIGURATION_BUILD_DIR}/CAPostEditorViewController" "${PODS_CONFIGURATION_BUILD_DIR}/HGCircularSlider" "${PODS_CONFIGURATION_BUILD_DIR}/MDFInternationalization" "${PODS_CONFIGURATION_BUILD_DIR}/MDFTextAccessibility" "${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents" "${PODS_CONFIGURATION_BUILD_DIR}/VACalendar"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ADDatePicker/ADDatePicker.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/BottomPopup/BottomPopup.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/CAPostEditorViewController/CAPostEditorViewController.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/HGCircularSlider/HGCircularSlider.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MDFInternationalization/MDFInternationalization.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialComponents.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/VACalendar/VACalendar.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = $(inherited) -framework "ADDatePicker" -framework "BottomPopup" -framework "CAPostEditorViewController" -framework "Foundation" -framework "HGCircularSlider" -framework "MDFInternationalization" -framework "MDFTextAccessibility" -framework "MaterialComponents" -framework "UIKit" -framework "VACalendar"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vyx-VX-Spb">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ClockIt-->
+        <scene sceneID="LTl-vC-W26">
+            <objects>
+                <viewController id="vyx-VX-Spb" customClass="WorkItemViewController" customModule="GigP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TQQ-Yv-p5x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ja6-8v-wfs" userLabel="Week Days View" customClass="VAWeekDaysView" customModule="VACalendar">
+                                <rect key="frame" x="0.0" y="124" width="414" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ZSq-JX-JP2"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-fH-5cf" customClass="MDCFlatButton">
+                                <rect key="frame" x="340" y="40" width="54" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="dEB-Wa-UbR"/>
+                                    <constraint firstAttribute="width" constant="64" id="ec6-CO-JsE"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="2fe-HH-7al"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="plus">
+                                    <color key="titleColor" red="0.58039215690000001" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="addWorkItem:" destination="vyx-VX-Spb" eventType="touchUpInside" id="kly-U0-UXo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35C-5U-meL" userLabel="Month Header View" customClass="VAMonthHeaderView" customModule="VACalendar">
+                                <rect key="frame" x="0.0" y="84" width="414" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="r4B-vQ-uUX"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kap-Ou-kz0">
+                                <rect key="frame" x="0.0" y="513" width="414" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="d6O-dk-J6c"/>
+                                </constraints>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCellIdentifier" id="663-y1-gzS" customClass="WorkItemTableViewCell" customModule="GigP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="663-y1-gzS" id="dEg-ES-DRh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvp-mh-XYk" userLabel="client">
+                                                    <rect key="frame" x="20" y="13" width="82" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.58039215690000001" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owo-kq-0lm" userLabel="hstValue">
+                                                    <rect key="frame" x="120" y="39" width="113" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.58039215690000001" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KK-Ts-3qc" userLabel="workDesc">
+                                                    <rect key="frame" x="120" y="13" width="294" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.58039215690000001" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsP-Ls-JUO" userLabel="hoursValue">
+                                                    <rect key="frame" x="290" y="39" width="89" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.58039215690000001" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2C-Nk-Xf2" userLabel="earningsValue">
+                                                    <rect key="frame" x="20" y="40" width="82" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.58039215690000001" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="client" destination="wvp-mh-XYk" id="iYo-P1-GAx"/>
+                                            <outlet property="earnings" destination="h2C-Nk-Xf2" id="aCj-mN-8Fp"/>
+                                            <outlet property="hours" destination="bsP-Ls-JUO" id="lLj-xy-BLD"/>
+                                            <outlet property="hst" destination="owo-kq-0lm" id="aS7-Oq-ZWR"/>
+                                            <outlet property="workDesc" destination="0KK-Ts-3qc" id="QHJ-Kt-XcA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vyx-VX-Spb" id="7gB-bz-aXz"/>
+                                    <outlet property="delegate" destination="vyx-VX-Spb" id="BIY-1P-kXh"/>
+                                    <outlet property="prefetchDataSource" destination="vyx-VX-Spb" id="p9c-nM-3FD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1KK-3x-22l" firstAttribute="trailing" secondItem="kap-Ou-kz0" secondAttribute="trailing" id="5ge-Wh-WQF"/>
+                            <constraint firstItem="n3w-fH-5cf" firstAttribute="leading" secondItem="1KK-3x-22l" secondAttribute="leading" constant="340" id="97b-aA-0DK"/>
+                            <constraint firstItem="n3w-fH-5cf" firstAttribute="top" secondItem="TQQ-Yv-p5x" secondAttribute="top" constant="40" id="97v-06-mw1"/>
+                            <constraint firstItem="ja6-8v-wfs" firstAttribute="leading" secondItem="1KK-3x-22l" secondAttribute="leading" id="KSl-2h-MFq"/>
+                            <constraint firstItem="1KK-3x-22l" firstAttribute="trailing" secondItem="35C-5U-meL" secondAttribute="trailing" id="OTb-be-kPD"/>
+                            <constraint firstItem="35C-5U-meL" firstAttribute="top" secondItem="1KK-3x-22l" secondAttribute="top" constant="40" id="U8F-uD-Hzj"/>
+                            <constraint firstItem="kap-Ou-kz0" firstAttribute="leading" secondItem="1KK-3x-22l" secondAttribute="leading" id="Ze7-h5-vfK"/>
+                            <constraint firstItem="1KK-3x-22l" firstAttribute="trailing" secondItem="n3w-fH-5cf" secondAttribute="trailing" constant="20" id="bEp-O6-auM"/>
+                            <constraint firstItem="35C-5U-meL" firstAttribute="leading" secondItem="1KK-3x-22l" secondAttribute="leading" id="het-OR-Abp"/>
+                            <constraint firstItem="1KK-3x-22l" firstAttribute="trailing" secondItem="ja6-8v-wfs" secondAttribute="trailing" id="is5-8o-sot"/>
+                            <constraint firstItem="ja6-8v-wfs" firstAttribute="top" secondItem="35C-5U-meL" secondAttribute="bottom" id="jUO-5z-LHH"/>
+                            <constraint firstItem="1KK-3x-22l" firstAttribute="bottom" secondItem="kap-Ou-kz0" secondAttribute="bottom" id="xBB-fr-RJA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1KK-3x-22l"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ClockIt" image="playlist-plus" id="FBt-C8-UNR">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="clockIt" destination="FBt-C8-UNR" id="PaI-sg-ek3"/>
+                        <outlet property="dailyItemsTableView" destination="kap-Ou-kz0" id="Gr0-V8-ASW"/>
+                        <outlet property="monthHeaderView" destination="35C-5U-meL" id="PUt-xO-SCs"/>
+                        <outlet property="weekDaysView" destination="ja6-8v-wfs" id="2O1-ag-qiP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9s-hQ-6sT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.91304347826087" y="172.76785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playlist-plus" width="36" height="36"/>
+        <image name="plus" width="48" height="48"/>
+    </resources>
+</document>

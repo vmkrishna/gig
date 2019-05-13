@@ -1,0 +1,6 @@
+framework module Pods_GigP {
+  umbrella header "Pods-GigP-umbrella.h"
+
+  export *
+  module * { export * }
+}

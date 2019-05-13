@@ -1,0 +1,6 @@
+framework module CAPostEditorViewController {
+  umbrella header "CAPostEditorViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
